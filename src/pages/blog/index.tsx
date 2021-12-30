@@ -4,6 +4,7 @@ import {graphql, Link} from 'gatsby'
 import {Navigation} from "../../components/navigation";
 import styled from "styled-components";
 import TestImage from "../../../posts/images/how-to-optimize-gatsby-url-hero.jpeg"
+import { Helmet } from "react-helmet"
 
 const Grid = styled.div`
   display: grid;
@@ -40,6 +41,9 @@ const StyledImg = styled.img`
 const BlogPage = ({data}) => {
     return (
         <Layout>
+            <Helmet>
+                <title>Overview | Gatsby Blog</title>
+            </Helmet>
             <Navigation/>
             <h3>Blog Overview</h3>
             <Grid>
