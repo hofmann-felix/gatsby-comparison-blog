@@ -1,6 +1,7 @@
 ---
 title: First Blogpost
 path: first-blogpost
+featuredImage: images/how-to-optimize-gatsby-url-hero.jpeg
 ---
 
 # This is the first Blogpost

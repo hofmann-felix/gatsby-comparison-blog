@@ -1,6 +1,7 @@
 ---
 title: Third Blogpost
 path: third-blogpost
+featuredImage: images/gh-billing-dashboard-cockpit.jpg
 ---
 
 # This is the third Blogpost

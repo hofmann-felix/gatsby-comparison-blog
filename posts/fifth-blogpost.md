@@ -1,6 +1,7 @@
 ---
 title: Fifth Blogpost
 path: fifth-blogpost
+featuredImage: images/space.png
 ---
 
 # This is the fifth Blogpost

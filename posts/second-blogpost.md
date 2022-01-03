@@ -1,6 +1,7 @@
 ---
 title: Second Blogpost
 path: second-blogpost
+featuredImage: images/chang-duong-Sj0iMtq_Z4w-unsplash.jpg
 ---
 
 # This is the second Blogpost

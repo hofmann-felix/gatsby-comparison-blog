@@ -3,8 +3,8 @@ import {Layout} from "../../components/layout";
 import {graphql, Link} from 'gatsby'
 import {Navigation} from "../../components/navigation";
 import styled from "styled-components";
-import TestImage from "../../../posts/images/how-to-optimize-gatsby-url-hero.jpeg"
 import { Helmet } from "react-helmet"
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const Grid = styled.div`
   display: grid;
@@ -25,16 +25,8 @@ const GridItem = styled(Link)`
   }
 
   &:hover {
-    color: #668CFF;
-  }
-`
-
-const StyledImg = styled.img`
-  width: 100%;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.03);
+    color: #663399;
+    text-decoration: underline;
   }
 `
 
@@ -50,7 +42,7 @@ const BlogPage = ({data}) => {
                 {
                     data.allMarkdownRemark.nodes.map((node) => (
                         <GridItem to={`/blog/${node.frontmatter.path}`} key={node.id}>
-                            <StyledImg src={TestImage}/>
+                            <GatsbyImage alt="" image={getImage(node.frontmatter.featuredImage)}/>
                             <p>{node.frontmatter.title}</p>
                         </GridItem>
                     ))
@@ -67,6 +59,16 @@ export const query = graphql`
                 frontmatter {
                     title
                     path
+                    featuredImage {
+                        childImageSharp {
+                            gatsbyImageData(
+                                width: 600
+                                aspectRatio: 1.77
+                                layout: CONSTRAINED
+                                placeholder: BLURRED
+                            )
+                        }
+                    }
                 }
                 id
             }
