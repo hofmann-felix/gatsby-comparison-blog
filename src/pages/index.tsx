@@ -2,6 +2,16 @@ import * as React from "react"
 import {Layout} from "../components/layout";
 import {Navigation} from "../components/navigation";
 import { Helmet } from "react-helmet"
+import styled from "styled-components";
+
+const ExternalLink = styled.a`
+  color: #663399;
+  text-decoration: none;
+  
+  &:hover{
+    text-decoration: underline;
+  }
+`
 
 export default function Index() {
     return (
@@ -10,7 +20,8 @@ export default function Index() {
                 <title>Gatsby Blog</title>
             </Helmet>
             <Navigation/>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <h1>Gatsby Comparison Blog</h1>
+            <p>This is a simple blog application to show the differences between Gatsby, Next.js and Remix. You can find a detailed description and the other blog applications in <ExternalLink href='#'>this article</ExternalLink>  about the project.</p>
         </Layout>
     );
 }
